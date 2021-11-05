@@ -1263,7 +1263,7 @@ def choices_super():
 			id.append(i['id'])
 	elif peak =="3":
 		os.system('clear')
-		print logo
+		logo()
 		idg=raw_input('\033[1;91m[+] \033[1;92mInput ID group \033[1;91m:\033[1;97m ')
 		try:
 			r=requests.get('https://graph.facebook.com/group/?id='+idg+'&access_token='+fb_token)
@@ -1280,7 +1280,7 @@ def choices_super():
 			id.append(p['id'])
         elif peak == "4":
                 os.system('clear')
-                print logo
+                logo()
                 try:
                         idlist = raw_input('\033[1;91m[+] \033[1;92mFile ID  \033[1;91m: \033[1;97m')
                         for line in open(idlist,'r').readlines():
@@ -1473,7 +1473,7 @@ def brute():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	try:
 		email = raw_input("\033[1;91m[+] \033[1;92mID\033[1;97m/\033[1;92mEmail\033[1;97m/\033[1;92mHp \033[1;97mTarget \033[1;91m:\033[1;97m ")
 		passw = raw_input("\033[1;91m[+] \033[1;92mWordlist \033[1;97mext(list.txt) \033[1;91m: \033[1;97m")
@@ -1546,7 +1546,7 @@ def menu_yahoo():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m With list friend"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Clone from friend"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m Clone from member group"
@@ -1590,7 +1590,7 @@ def yahoofriends():
 	except OSError:
 		pass
 	os.system('clear')
-	print logo
+	logo()
 	mpsh = []
 	jcsb = 0
 	mkdir('\033[1;91m[✺] \033[1;92mGetting email friend \033[1;97m...')
@@ -1651,7 +1651,7 @@ def yahoofromfriends():
 	except OSError:
 		pass
 	os.system('clear')
-	print logo
+	logo()
 	mpsh = []
 	jcsb = 0
 	idt = raw_input("\033[1;91m[+] \033[1;92mInput ID friend \033[1;91m: \033[1;97m")
@@ -1721,7 +1721,7 @@ def yahoomember():
 	except OSError:
 		pass
 	os.system('clear')
-	print logo
+	logo()
 	mpsh = []
 	jcsb = 0
 	id=raw_input('\033[1;91m[+] \033[1;92mInput ID group \033[1;91m:\033[1;97m ')
@@ -1791,7 +1791,7 @@ def yahoolist():
 	except OSError:
 		pass
 	os.system('clear')
-	print logo
+	logo()
 	files = raw_input("\033[1;91m[+] \033[1;92mFile path \033[1;91m: \033[1;97m")
 	try:
 		total = open(files,"r")
@@ -1849,7 +1849,7 @@ def menu_bot():
 		time.sleep(1)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Bot Reactions Target Post"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Bot Reactions group Post"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m BOT COMMENT Target Post"
@@ -1897,7 +1897,7 @@ def menu_react():
 		time.sleep(1)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	print ("\033[1;97m║--\033[1;91m> \033[1;92m1. \033[1;97mLike")
 	print ("\033[1;97m║--\033[1;91m> \033[1;92m2. \033[1;97mLove")
 	print ("\033[1;97m║--\033[1;91m> \033[1;92m3. \033[1;97mWow")
@@ -1948,7 +1948,7 @@ def react():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	ide = raw_input('\033[1;91m[+] \033[1;92mInput ID Target \033[1;91m:\033[1;97m ')
 	limit = raw_input("\033[1;91m[!] \033[1;92mLimit \033[1;91m:\033[1;97m ")
 	try:
@@ -1981,7 +1981,7 @@ def group_react():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	print ("\033[1;97m║--\033[1;91m> \033[1;92m1. \033[1;97mLike")
 	print ("\033[1;97m║--\033[1;91m> \033[1;92m2. \033[1;97mLove")
 	print ("\033[1;97m║--\033[1;91m> \033[1;92m3. \033[1;97mWow")
@@ -2032,7 +2032,7 @@ def reactg():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	ide = raw_input('\033[1;91m[+] \033[1;92mInput ID Group \033[1;91m:\033[1;97m ')
 	limit = raw_input("\033[1;91m[!] \033[1;92mLimit \033[1;91m:\033[1;97m ")
 	try:
@@ -2073,7 +2073,7 @@ def bot_comment():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	print "\033[1;91m[!] \033[1;92mUse \033[1;97m'<>' \033[1;92mfor new lines"
 	ide = raw_input('\033[1;91m[+] \033[1;92mID Target \033[1;91m:\033[1;97m ')
 	km = raw_input('\033[1;91m[+] \033[1;92mComment \033[1;91m:\033[1;97m ')
@@ -2109,7 +2109,7 @@ def group_comment():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	print "\033[1;91m[!] \033[1;92mUse \033[1;97m'<>' \033[1;92mfor new lines"
 	ide = raw_input('\033[1;91m[+] \033[1;92mID Group  \033[1;91m:\033[1;97m ')
 	km = raw_input('\033[1;91m[+] \033[1;92mComment \033[1;91m:\033[1;97m ')
@@ -2156,7 +2156,7 @@ def deletepost():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	print("\033[1;91m[+] \033[1;92mFrom \033[1;91m: \033[1;97m%s"%fb_name)
 	mkdir("\033[1;91m[+] \033[1;92mStart\033[1;97m ...")
 	print 42*"\033[1;97m═"
@@ -2193,7 +2193,7 @@ def accept():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	limit = raw_input("\033[1;91m[!] \033[1;92mLimit \033[1;91m:\033[1;97m ")
 	r = requests.get('https://graph.facebook.com/me/friendrequests?limit='+limit+'&access_token='+fb_token)
 	friends = json.loads(r.text)
@@ -2226,7 +2226,7 @@ def unfriend():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	mkdir('\033[1;91m[✺] \033[1;92mStart \033[1;97m...')
 	print "\033[1;97mStop \033[1;91mCTRL+C"
 	print 42*"\033[1;97m═"
@@ -2260,7 +2260,7 @@ def func():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Create Post"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Create Wordlist"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m Account Checker"
@@ -2302,7 +2302,7 @@ def status():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	msg=raw_input('\033[1;91m[+] \033[1;92mType status \033[1;91m:\033[1;97m ')
 	if msg == "":
 		print "\033[1;91m[!] Don't be empty"
@@ -2329,7 +2329,7 @@ def wordlist():
 		login()
 	try:
 		os.system('clear')
-		print logo
+		logo()
 		print "\033[1;91m[?] \033[1;92mFill in the complete data of the target below"
 		print 42*"\033[1;97m═"
 		a = raw_input("\033[1;91m[+] \033[1;92mfb_name Depan \033[1;97m: ")
@@ -2389,7 +2389,7 @@ def check_akun():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	print "\033[1;91m[?] \033[1;92mCreate in file\033[1;91m : \033[1;97musername|password"
 	print 42*"\033[1;97m═"
 	live = []
@@ -2439,7 +2439,7 @@ def group_list():
 	except OSError:
 		pass
 	os.system('clear')
-	print logo
+	logo()
 	try:
 		uh = requests.get('https://graph.facebook.com/me/groups?access_token='+fb_token)
 		good = json.loads(uh.text)
@@ -2485,7 +2485,7 @@ def guard():
 		time.sleep(0.01)
 		login()
 	os.system('clear')
-	print logo
+	logo()
 	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Activate"
 	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Not activate"
 	print "\033[1;97m║--\033[1;91m> \033[1;91m0.\033[1;97m Back"
